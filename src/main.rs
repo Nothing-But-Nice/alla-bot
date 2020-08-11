@@ -8,7 +8,7 @@ use std::str;
 use regex::Regex;
 
 use serenity::{
-    model::{channel::Message, gateway::Ready},
+    model::{channel::Message, gateway::Ready, gateway::Game, user::OnlineStatus},
     prelude::*,
 };
 
@@ -39,8 +39,6 @@ impl EventHandler for Handler {
     fn ready(&self, _: Context, ready: Ready) {
         println!("{} is connected!", ready.user.name);
 
-        use serenity::model::gateway::Game;
-        use serenity::model::user::OnlineStatus;
 
         let game = Game::playing("!zam !bis");
         let status = OnlineStatus::Online;
