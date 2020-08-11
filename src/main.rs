@@ -36,11 +36,11 @@ impl EventHandler for Handler {
         }
     }
 
-    fn ready(&self, _: Context, ready: Ready) {
+    fn ready(&self, ctx: Context, ready: Ready) {
         println!("{} is connected!", ready.user.name);
 
 
-        set_activity(Activity::playing("!zam !bis"));
+        ctx.set_activity(Activity::playing("!zam !bis"));
     }
 }
 
