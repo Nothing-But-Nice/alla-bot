@@ -40,7 +40,7 @@ impl EventHandler for Handler {
         println!("{} is connected!", ready.user.name);
 
 
-        context.set_activity(Activity::playing("!zam !bis"));
+        set_activity(Activity::playing("!zam !bis"));
     }
 }
 
