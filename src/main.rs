@@ -12,6 +12,8 @@ use serenity::{
     prelude::*,
 };
 
+use serenity::model::user::OnlineStatus;
+
 use alla::Alla;
 use bis::Bis;
 
@@ -37,7 +39,10 @@ impl EventHandler for Handler {
     }
 
     fn ready(&self, _: Context, ready: Ready) {
+        
         println!("{} is connected!", ready.user.name);
+        let game = Game::playing("!zam !bis");
+        context.set_presence(Some(game), OnlineStatus::Online);
     }
 }
 
