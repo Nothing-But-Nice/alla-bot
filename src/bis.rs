@@ -218,7 +218,7 @@ impl Bis {
         } else if msg_parts.len() == 3 {
             Bis::do_search(msg_parts[0], msg_parts[1], msg_parts[2], None)
         } else if msg_parts.len() > 3 {
-            let expac = msg_parts[2..].join(" ");
+            let expac = msg_parts[3..].join(" ");
             Bis::do_search(
                 msg_parts[0],
                 msg_parts[1],
