@@ -27,7 +27,7 @@ impl Alla {
         let links = Alla::get_link_name_pairs(document);
         if links.len() == 0 {
             return format!("No results found for \"{}\"", item_name);
-        } else if links.len() > 3 {
+        } else if links.len() > 5 {
             return format!("Too many results for \"{}\"", item_name);
         } else {
             let details = Alla::get_details(links);
