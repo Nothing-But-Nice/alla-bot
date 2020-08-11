@@ -6,7 +6,7 @@ use crate::util::AllaUtil;
 use select::node::{Children, Node};
 use std::borrow::BorrowMut;
 
-static CUR_EXPANSION: &str = "The Shadows of Luclin";
+static CUR_EXPANSION: &str = "The Ruins of Kunark";
 static EQ_ITEMS_BASE: &str = "http://eqitems.com/?";
 
 struct BisQueryMapper;

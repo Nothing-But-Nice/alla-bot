@@ -24,6 +24,7 @@ impl EventHandler for Handler {
 
         let response = match msg_parts[0] {
             "!alla" => Some(Alla::accept_raw(msg_parts[1..].to_vec())),
+            "!zam" => Some(Alla::accept_raw(msg_parts[1..].to_vec())),
             "!bis" => Some(Bis::accept_raw(msg_parts[1..].to_vec())),
             _ => None,
         };
