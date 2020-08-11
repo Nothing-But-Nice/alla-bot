@@ -8,7 +8,7 @@ use std::str;
 use regex::Regex;
 
 use serenity::{
-    model::{channel::Message, gateway::Ready, gateway::Game, user::OnlineStatus},
+    model::{channel::Message, gateway::Ready, gateway::Activity},
     prelude::*,
 };
 
@@ -40,10 +40,7 @@ impl EventHandler for Handler {
         println!("{} is connected!", ready.user.name);
 
 
-        let game = Game::playing("!zam !bis");
-        let status = OnlineStatus::Online;
-
-        context.set_presence(Some(game), status);
+        context.set_activity(Activity::playing("!zam !bis"));
     }
 }
 
